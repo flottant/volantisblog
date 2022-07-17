@@ -12,7 +12,7 @@ default:
   cover: https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/cover/76b86c0226ffd.svg
   image: https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg
 ############################### CSP ###############################
-# 内容安全策略( CSP ) meta 标签 http-equiv="Content-Security-Policy"
+# 内容安全策略 ( CSP ) meta 标签 http-equiv="Content-Security-Policy"
 # https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CSP
 # https://content-security-policy.com/
 # 也可以设为 false 在 HTTP 标头中设置 https://volantis.js.org/v5/advanced-settings/#设置-HTTP-响应标头
@@ -34,27 +34,27 @@ csp:
     script-src 'self' https: 'unsafe-inline' *;
     style-src 'self' https: 'unsafe-inline' *;
   "
-  # 可以使用自动程序替换默认的 'unsafe-inline' 和 * 生成更严格的内容安全策略.
-  # 另可以参考官网的 gulp 方案.
+  # 可以使用自动程序替换默认的 'unsafe-inline' 和 * 生成更严格的内容安全策略。
+  # 另可以参考官网的 gulp 方案。
   # gulpfile.js https://github.com/volantis-x/community/blob/main/gulpfile.js
 ############################### CDN ###############################
 # 本地静态文件使用 CDN 加速
-# 默认使用 https://unpkg.com/hexo-theme-volantis@<%- theme.info.theme_version %>/source/js/*.js ，注意版本号对应关系！！可以通过修改以下配置项覆盖
+# 默认使用 https://unpkg.com/hexo-theme-volantis@<%- theme.info.theme_version %>/source/js/*.js，注意版本号对应关系！！可以通过修改以下配置项覆盖
 # 开发者注意 cdn.enable 设置为 false
 cdn:
   enable: true
   # CDN 前缀，为空使用默认值，链接最后不加 "/",
-  # 例如： https://fastly.jsdelivr.net/gh/volantis-x/volantis-x.github.io@gh-page 填写最后编译生成的源码CDN地址前缀，此路径下应该含有/js与/css目录,
+  # 例如： https://fastly.jsdelivr.net/gh/volantis-x/volantis-x.github.io@gh-page 填写最后编译生成的源码 CDN 地址前缀，此路径下应该含有/js 与/css 目录，
   # 该配置默认值是："https://unpkg.com/hexo-theme-volantis@"+ theme.info.theme_version +"/source"
-  prefix: #https://npm.elemecdn.com/hexo-theme-volantis/source
-  # 以下配置可以覆盖 cdn.prefix,配置项的值可以为空，但是要使用CDN必须依据路径填写配置项的键
+  prefix: https://npm.elemecdn.com/hexo-theme-volantis/source
+  # 以下配置可以覆盖 cdn.prefix，配置项的值可以为空，但是要使用 CDN 必须依据路径填写配置项的键
   set:
     js:
       app: /js/app.js
     css:
       style: /css/style.css # (异步加载样式)
 # 静态资源版本控制
-# 本地文件使用文件内容的hash值作为版本号(app.8c1e7c88.js)  其他为时间戳 (?time=1648684470140)
+# 本地文件使用文件内容的 hash 值作为版本号 (app.8c1e7c88.js)  其他为时间戳 (?time=1648684470140)
 # 建议静态资源设置标头 浏览器缓存一年边缘缓存一个月 cache-control: max-age=86400, s-maxage=31536000 如果有更新记得刷新缓存
 cdn_version: true
 # volantis static 静态资源文件 npm 包 CDN 地址 (后面加 "/" )
@@ -63,9 +63,9 @@ volantis_static_cdn: https://unpkg.com/volantis-static@0.0.1654736714924/
 ########################################################################
 # 全局页面字符串替换  A => B (可用于临时修改错字等)
 replace:
-  - https://fastly.jsdelivr.net/npm/ => https://unpkg.com/
-  - https://fastly.jsdelivr.net/gh/ => https://fastly.jsdelivr.net/gh/
-#  - https://unpkg.com/ => https://npm.elemecdn.com/
+#  - https://fastly.jsdelivr.net/npm/ => https://unpkg.com/
+#  - https://fastly.jsdelivr.net/gh/ => https://fastly.jsdelivr.net/gh/
+  - https://unpkg.com/ => https://npm.elemecdn.com/
 
 # dns-prefetch preconnect x-dns-prefetch-control
 dns_prefetch:
@@ -149,7 +149,7 @@ cover:
 pages:
   # 友链页面配置
   friends:
-    layout_scheme: traditional # simple: 简单布局, traditional: 传统布局
+    layout_scheme: traditional # simple: 简单布局，traditional: 传统布局
 
 ############################### Article Layout ############################### > start
 # 文章布局
@@ -227,7 +227,7 @@ article:
           rules:
             type1: 
               text: <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh#" target="_blank">CC BY-NC-ND 4.0</a>
-              desc: 署名-非商业性使用-禁止演绎 4.0 国际。
+              desc: 署名 - 非商业性使用 - 禁止演绎 4.0 国际。
             type2: 
               text: 禁止转载引用
               desc: 除非获得原作者的单独授权，任何第三方不得转载！
@@ -299,7 +299,7 @@ article:
           img: volantis-static/media/org.volantis/logo/128/qzone.png #  https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png
         - id: weibo
           img: volantis-static/media/org.volantis/logo/128/weibo.png #  https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png
-        - id: # qrcode # 当id为qrcode时需要安装插件  npm i hexo-helper-qrcode
+        - id: # qrcode # 当 id 为 qrcode 时需要安装插件  npm i hexo-helper-qrcode
           img: # volantis-static/media/org.volantis/logo/128/wechat.png #  https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png
         - id: # telegram
           img: # volantis-static/media/org.volantis/logo/128/telegram.png #  https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png
@@ -322,7 +322,7 @@ comments:
     server: https://yours-artalk-domain    # 修改为自建的后端服务地址
     path:  # 全局评论地址
     placeholder: # 评论占位
-    # artalk 有三类图片：1.上传至服务端 2.上传至服务端后利用upgit上传至图床 3.前端上传至图床（本配置为此类）
+    # artalk 有三类图片：1.上传至服务端 2.上传至服务端后利用 upgit 上传至图床 3.前端上传至图床（本配置为此类）
     # 配置此项时将覆盖服务端上传能力
     imageUploader:
       # 以兰空图床为例，下列填写内容为：
@@ -393,7 +393,7 @@ comments:
     path: # 全局评论地址
     js: https://unpkg.com/disqusjs@1.3/dist/disqus.js
     css: https://unpkg.com/disqusjs@1.3/dist/disqusjs.css
-    # 配置项按照yml格式继续填写即可 除了 [siteName url identifier] 选项
+    # 配置项按照 yml 格式继续填写即可 除了 [siteName url identifier] 选项
     #shortname:
     #api:
     #apikey:
@@ -404,7 +404,7 @@ comments:
   # https://gitalk.github.io/
   gitalk:
     js: https://unpkg.com/gitalk@1/dist/gitalk.min.js
-    # 配置项按照yml格式继续填写即可 除了 [id distractionFreeMode] 选项
+    # 配置项按照 yml 格式继续填写即可 除了 [id distractionFreeMode] 选项
     clientID:
     clientSecret:
     repo:
@@ -412,7 +412,7 @@ comments:
     admin: # []
     path: # 全局评论地址
 
-  # Vssue 暂不支持Pjax
+  # Vssue 暂不支持 Pjax
   # https://vssue.js.org/zh/
   vssue:
     js: https://fastly.jsdelivr.net/gh/meteorlxy/vssue@1.4.4/packages/vssue/dist/vssue.github.min.js
@@ -423,7 +423,7 @@ comments:
     clientId:
     clientSecret:
 
-  # LiveRe 暂不支持Pjax
+  # LiveRe 暂不支持 Pjax
   # https://www.livere.com
   livere:
     uid:
@@ -436,7 +436,7 @@ comments:
     css:
     gravatar:
 
-  # HashOver 暂不支持Pjax
+  # HashOver 暂不支持 Pjax
   # https://www.barkdull.org/software/hashover
   hashover:
     src: https://example.com/(path/)comments.php
@@ -446,8 +446,8 @@ comments:
   twikoo:
     js: https://unpkg.com/twikoo@latest # 建议锁定版本
     path: # 全局评论地址
-    # 其他配置项按照yml格式继续填写即可 除了 [el path] 选项
-    envId: xxxxxxxxxxxxxxx # 腾讯云环境id
+    # 其他配置项按照 yml 格式继续填写即可 除了 [el path] 选项
+    envId: xxxxxxxxxxxxxxx # 腾讯云环境 id
     placeholder: #全局评论占位，也可以在管理面板中的配置管理处设置（此处优先级更高）
 
   # Waline
@@ -455,9 +455,9 @@ comments:
   waline:
     js: https://unpkg.com/@waline/client@2.6.1/dist/waline.js
     css: https://unpkg.com/@waline/client@2.6.1/dist/waline.css
-    path: # 全局评论地址 目前设置全局评论地址后visitor失效,这是waline的问题
+    path: # 全局评论地址 目前设置全局评论地址后 visitor 失效，这是 waline 的问题
     placeholder: # 评论占位提示
-    serverURL: https://walintflot.vercel.app # Waline 的服务端地址（必填） 测试用地址: https://waline.vercel.app
+    serverURL: https://walintflot.vercel.app # Waline 的服务端地址（必填）测试用地址：https://waline.vercel.app
     imageUploader:
       # 以兰空图床为例，下列填写内容为：
       # url: https://xxxxxx/api/v1/upload
@@ -468,7 +468,7 @@ comments:
       resp:  # 图片地址返回值的字段
     pageview: true # 浏览量统计
     comment: true  # 评论数统计
-    # 其他配置项按照yml格式继续填写即可 除了 [el path imageUploader] 选项
+    # 其他配置项按照 yml 格式继续填写即可 除了 [el path imageUploader] 选项
     # 组件属性地址：https://waline.js.org/reference/component.html
     # meta: ['nick', 'mail', 'link']
 
@@ -696,14 +696,14 @@ plugins:
   # 图片懒加载
   # https://www.npmjs.com/package/vanilla-lazyload
   # tips: 
-  # 这里是主题自带的图片懒加载, 实现方案位于 /scripts/filters/z-lazyload ; srcset 属性的的优先级比 src 属性要高, 注意 srcset 存放了懒加载占位图,  src 存放了原图
-  # 在支持 srcset 的浏览器或者 RSS 阅读器(还会有人使用老旧的阅读器?)上会优先读取 srcset 加载的图片(懒加载占位图), 对于 RSS 中图片丢失变成懒加载占位图的问题, 建议 自行使用脚本移除 srcset 属性 或 关闭图片懒加载 或 在 RSS 中插入 vanilla-lazyload
+  # 这里是主题自带的图片懒加载，实现方案位于 /scripts/filters/z-lazyload ; srcset 属性的的优先级比 src 属性要高，注意 srcset 存放了懒加载占位图，src 存放了原图
+  # 在支持 srcset 的浏览器或者 RSS 阅读器 (还会有人使用老旧的阅读器？) 上会优先读取 srcset 加载的图片 (懒加载占位图), 对于 RSS 中图片丢失变成懒加载占位图的问题，建议 自行使用脚本移除 srcset 属性 或 关闭图片懒加载 或 在 RSS 中插入 vanilla-lazyload
   lazyload:
     enable: true
     js: https://unpkg.com/vanilla-lazyload@17.1.0/dist/lazyload.min.js
     onlypost: false
-    loadingImg: # https://fastly.jsdelivr.net/gh/volantis-x/cdn-volantis@3/img/placeholder/c617bfd2497fcea598e621413e315c368f8d8e.svg # 不建议使用占位图, 建议loadingImg为空, 当前占位图会产生布局偏移, loadingImg 为空占位图是一个 1X1 像素的图片
-    blurIn: true # 模糊加载效果 （loadingImg为空时有效）
+    loadingImg: # https://fastly.jsdelivr.net/gh/volantis-x/cdn-volantis@3/img/placeholder/c617bfd2497fcea598e621413e315c368f8d8e.svg # 不建议使用占位图，建议 loadingImg 为空，当前占位图会产生布局偏移，loadingImg 为空占位图是一个 1X1 像素的图片
+    blurIn: true # 模糊加载效果（loadingImg 为空时有效）
 
   ######## Plugins to optimize the experience:
   # 代码高亮
@@ -711,7 +711,7 @@ plugins:
   # highlight.js
   highlightjs:
     copy_code: true
-    # 如果开启以下配置, hexo.config.highlight.enable 需要设置为 false ; hexo.config.highlight.enable 设置为 true, 则以下配置无效
+    # 如果开启以下配置，hexo.config.highlight.enable 需要设置为 false ; hexo.config.highlight.enable 设置为 true, 则以下配置无效
     # # 不再支持 v11.1.0 以下版本
     # js: https://unpkg.com/@highlightjs/cdn-assets@11.5.1/highlight.min.js # Please set hexo.config.highlight.enable = false !!!
     # css: https://unpkg.com/@highlightjs/cdn-assets@11.5.1/styles/default.min.css
@@ -820,7 +820,7 @@ plugins:
   pjax:
     js: https://unpkg.com/pjax@0.2.8/pjax.min.js
     enable: true
-    cover: true          # 封面是否pjax处理 false：每次切换页面封面都重载，适合封面较少的情况 true：封面经过Pjax处理，适合封面较多的情况
+    cover: true          # 封面是否 pjax 处理 false：每次切换页面封面都重载，适合封面较少的情况 true：封面经过 Pjax 处理，适合封面较多的情况
     timeout: 5000        # The timeout in milliseconds for the XHR requests. Set to 0 to disable the timeout.
     cacheBust: false     # When set to true, Pjax appends a timestamp  to skip the browser cache.
     animation: circle # false, nprogress, circle
@@ -839,38 +839,38 @@ plugins:
 
   # 旧版 Internet Explorer 淘汰行动
   # https://www.microsoft.com/zh-cn/WindowsForBusiness/End-of-IE-support
-  # 本主题不支持Internet Explorer的任何版本!!!
+  # 本主题不支持 Internet Explorer 的任何版本 !!!
   killOldVersionsOfIE:
     enable: true
 
-  # 禁用JavaScript提示
+  # 禁用 JavaScript 提示
   # 本页面需要浏览器支持（启用）JavaScript
-  # 主题中的某些插件必须启用JavaScript才能正常工作，例如开启scrollreveal如果禁用JavaScript会导致卡片消失
+  # 主题中的某些插件必须启用 JavaScript 才能正常工作，例如开启 scrollreveal 如果禁用 JavaScript 会导致卡片消失
   killNoScript:
     enable: true
 
   # Artitalk https://artitalk.js.org
   # 配置过程请参考：https://artitalk.js.org/doc.html
   # 使用过旧版本的请修改Leancloud shuoshuo class部分列名：https://artitalk.js.org/release.html
-  # 除appID和appKEY外均为选填项
+  # 除 appID 和 appKEY 外均为选填项
   artitalk:
     # Set `plugins: ["artitalk"]` to enable in front-matter
     # 不支持 Pjax
-    # 配置项按照yml格式继续填写即可
+    # 配置项按照 yml 格式继续填写即可
     js: https://unpkg.com/artitalk
     appId: ogP8qj3veMh0LFpFWMPOyF0X-MdYXbMMI # your appID
     appKey: nHXLd3N3Jgh460t2iRQKWAtr # your appKEY
-    # serverURL:  #leancloud绑定的api访问域名，使用国际版的话不需要填写
-    # lang: # 语言设置，zh为汉语，en为英语，es为西班牙语。默认为汉语
+    # serverURL:  #leancloud 绑定的 api 访问域名，使用国际版的话不需要填写
+    # lang: # 语言设置，zh 为汉语，en 为英语，es 为西班牙语。默认为汉语
     # pageSize: #每页说说的显示数量
     # shuoPla: #在编辑说说的输入框中的占位符
-    # avatarPla: #自定义头像url的输入框的占位符
-    # motion: #加载动画的开关，1为开，0为关，默认为开
-    # bgImg: #说说输入框背景图片url
-    # color1: #说说背景颜色1&按钮颜色1
-    # color2: #说说背景颜色2&按钮颜色2
+    # avatarPla: #自定义头像 url 的输入框的占位符
+    # motion: #加载动画的开关，1 为开，0 为关，默认为开
+    # bgImg: #说说输入框背景图片 url
+    # color1: #说说背景颜色 1&按钮颜色 1
+    # color2: #说说背景颜色 2&按钮颜色 2
     # color3: #说说字体颜色
-    # cssUrl: #自定义css接口
+    # cssUrl: #自定义 css 接口
 
   # BBtalk https://bb.js.org
   bbtalk:
@@ -975,7 +975,7 @@ rightmenus:
   # group: 菜单项所处分组名称
   # 注： 
   # 1. link/event 二选一，同时出现时仅处理 link
-  # 2. 内置事件列表： copyText, copyLink, copyPaste, copyAll, copyCut, copyImg, printMode, readMode
+  # 2. 内置事件列表：copyText, copyLink, copyPaste, copyAll, copyCut, copyImg, printMode, readMode
   # 3. 内置组列表：navigation, inputBox, seletctText, elementCheck, elementImage, articlePage
   # 4. plugins 列允许自定义组内项目
   # 5. menus   列允许自定义组及其内容
@@ -1044,7 +1044,7 @@ rightmenus:
 rightmenu:
   enable: false
   faicon: fa              # 公共图标类型 fa fal fa-solid fa-duotone
-  # hr: 分割线, music: 音乐控制器
+  # hr: 分割线，music: 音乐控制器
   layout: [home, hr, help, examples, contributors, hr, source_docs, source_theme, hr, print, darkmode, reading, music]
   ### 可选功能项 ###
   print:                  # 只有文章页才允许自定义打印
@@ -1178,7 +1178,7 @@ color_scheme:
     # 行内代码颜色
     inlinecode: '#D56D28'
 
-    # 文章部分 高强度文本的不透明度应为87％ 中等重点文字适用于60％
+    # 文章部分 高强度文本的不透明度应为 87％ 中等重点文字适用于 60％
     h1: '#FFFFFFde'            #  Dark Grey 8
     h2: '#FFFFFFde'
     h3: '#FFFFFF99'            #  Dark Grey 7
@@ -1316,12 +1316,12 @@ open_graph:
 # https://schema.org.cn/
 # 结构化数据用于更改搜索结果的显示效果
 # 目前内置的结构化数据: blogposting, breadcrumblist, organization, person, website
-# 目前内置的富媒体搜索结果: 路径(面包屑导航), 徽标(Logo), 站点链接搜索框(SearchAction)
+# 目前内置的富媒体搜索结果: 路径 (面包屑导航), 徽标 (Logo), 站点链接搜索框 (SearchAction)
 # https://developers.google.com/search/docs/advanced/structured-data/intro-structured-data
 # 富媒体搜索结果测试: https://search.google.com/test/rich-results
 structured_data:
   enable: true
-  # 以下是覆盖配置, 默认配置见 scripts/helpers/structured-data/lib/config.js
+  # 以下是覆盖配置，默认配置见 scripts/helpers/structured-data/lib/config.js
   data:
     person:
       sns:
