@@ -116,9 +116,9 @@ cover:
   background: https://api.maho.cc/random-img/pc.php
   # background: https://bing.ioliu.cn/v1/rand?w=1920&h=1200
   logo: #https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-Cover@3x.png
-  title: 'Volantis'
+  title: 'flot 的博客'
   subtitle: ''
-  search: A Wonderful Theme for Hexo # search bar placeholder
+  search: 点击此处来搜索 # search bar placeholder
   features:
     #- name: 文档
     #  icon: #
@@ -629,7 +629,7 @@ tag_plugins:
 ############################### Site Footer ############################### > start
 site_footer:
   # layout of footer: [aplayer, social, license, info, copyright]
-  layout: [aplayer, social, license, info, copyright]
+  layout: [social, license, copyright]
   social:
     - icon: #fa-solid fa-rss
       url:
@@ -743,7 +743,7 @@ plugins:
   ######## Plugins for SEO:
   # npm i hexo-wordcount
   wordcount:
-    enable: #true
+    enable: true
 
   ######## Plugins for ...
   # Button Ripple Effect
@@ -818,7 +818,7 @@ plugins:
 
   # Pjax
   pjax:
-    js: https://unpkg.com/pjax@0.2.8/pjax.min.js
+    js: https://npm.elemecdn.com/pjax@0.2.8/pjax.min.js
     enable: true
     cover: true          # 封面是否 pjax 处理 false：每次切换页面封面都重载，适合封面较少的情况 true：封面经过 Pjax 处理，适合封面较多的情况
     timeout: 5000        # The timeout in milliseconds for the XHR requests. Set to 0 to disable the timeout.
