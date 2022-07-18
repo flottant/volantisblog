@@ -113,7 +113,7 @@ cover:
     home: true
     archive: true
     others: false # can be written in front-matter 'cover: true'
-  background: https://api.maho.cc/random-img/pc.php
+  background: https://npm.elemecdn.com/chenyfan-cdn@2.0.0/img/back/b_top.jpg #https://api.maho.cc/random-img/pc.php
   # background: https://bing.ioliu.cn/v1/rand?w=1920&h=1200
   logo: #https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-Cover@3x.png
   title: 'flot 的博客'
