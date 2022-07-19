@@ -1,0 +1,9 @@
+- group: 我的好朋友
+  description:  奇奇怪怪，可可爱爱。
+  items:
+    - title: 掌控物质的博客 # 名称
+      avatar: https://zk-wz.gitee.io/images/avatar.webp # 头像
+      url: https://zk-wz.gitee.io # 链接
+    # screenshot: # 截图
+    # keywords: # 关键词
+      description: 特别喜欢光污染。Games 101... 越亮越好！ # 描述
