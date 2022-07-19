@@ -141,10 +141,10 @@ cover:
       icon: fa-solid fa-link #
       img: #volantis-static/media/twemoji/assets/svg/1f389.svg #  https://fastly.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f389.svg
       url: /friends/
-    - name: 关于
-      icon: fa-solid fa-info-circle #
-      img: #volantis-static/media/twemoji/assets/svg/1f4f0.svg #  https://fastly.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4f0.svg
-      url: /about/
+    #- name: 关于
+    #  icon: fa-solid fa-info-circle #
+    #  img: #volantis-static/media/twemoji/assets/svg/1f4f0.svg #  https://fastly.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4f0.svg
+    #  url: /about/
     #- name: 源码
     #  icon: #
     #  img: volantis-static/media/twemoji/assets/svg/1f9ec.svg #  https://fastly.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f9ec.svg
