@@ -117,3 +117,13 @@ markdown_it_plus:
         - plugin:
             name: markdown-it-mark
             enable: false
+
+# Extensions
+feed:
+    type: atom
+    path: atom.xml
+    limit: 20
+    hub:
+    content: true
+    content_limit: 
+    content_limit_delim: ' '
