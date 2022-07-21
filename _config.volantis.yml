@@ -299,15 +299,15 @@ article:
       # 分享
       share:
         - id: qq
-          img:  volantis-static/media/org.volantis/logo/128/qq.png #  https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png
+          img: https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png
         - id: qzone
-          img: volantis-static/media/org.volantis/logo/128/qzone.png #  https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png
+          img: https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png
         - id: weibo
-          img: volantis-static/media/org.volantis/logo/128/weibo.png #  https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png
+          img: https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png
         - id: # qrcode # 当 id 为 qrcode 时需要安装插件  npm i hexo-helper-qrcode
           img: # volantis-static/media/org.volantis/logo/128/wechat.png #  https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png
         - id: telegram
-          img: volantis-static/media/org.volantis/logo/128/telegram.png #  https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png
+          img: https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png
 ############################### Article Layout ############################### > end
 
 
@@ -538,7 +538,7 @@ sidebar:
     # category widget
     category:
       class: category
-      display: [desktop] # [desktop, mobile]
+      display: [desktop,mobile] # [desktop, mobile]
       header:
         icon: fa-solid fa-folder-open
         title: 文章分类
@@ -570,7 +570,7 @@ sidebar:
     # webinfo widget
     webinfo:
       class: webinfo
-      display: [desktop]
+      display: [desktop,mobile]
       header:
         icon: fa-solid fa-award
         title: 站点信息
