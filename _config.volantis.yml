@@ -46,7 +46,7 @@ cdn:
   # CDN 前缀，为空使用默认值，链接最后不加 "/",
   # 例如： https://fastly.jsdelivr.net/gh/volantis-x/volantis-x.github.io@gh-page 填写最后编译生成的源码 CDN 地址前缀，此路径下应该含有/js 与/css 目录，
   # 该配置默认值是："https://unpkg.com/hexo-theme-volantis@"+ theme.info.theme_version +"/source"
-  prefix: https://code.bdstatic.com/npm/hexo-theme-volantis/source
+  prefix: https://fastly.jsdelivr.com/npm/hexo-theme-volantis/source
   # 以下配置可以覆盖 cdn.prefix，配置项的值可以为空，但是要使用 CDN 必须依据路径填写配置项的键
   set:
     js:
@@ -70,7 +70,7 @@ replace:
 # dns-prefetch preconnect x-dns-prefetch-control
 dns_prefetch:
   #- https://unpkg.com
-  - https://code.bdstatic.com/
+  - https://fastly.jsdelivr.com/
 
 # 平滑滚动效果
 scroll_smooth: true
@@ -116,7 +116,7 @@ cover:
     home: true
     archive: true
     others: false # can be written in front-matter 'cover: true'
-  background: https://code.bdstatic.com/npm/flotimg@1.0.7/pixiv-recommend/71462111_p0.webp #https://api.maho.cc/random-img/pc.php
+  background: https://fastly.jsdelivr.com/npm/flotimg@1.0.7/pixiv-recommend/71462111_p0.webp #https://api.maho.cc/random-img/pc.php
   # background: https://bing.ioliu.cn/v1/rand?w=1920&h=1200
   logo: #https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-Cover@3x.png
   title: 'flot'
@@ -663,24 +663,24 @@ plugins:
   globalJquery: false # 全局引入 jquery
   jquery: https://unpkg.com/jquery@3.6.0/dist/jquery.min.js
   # fontawesome Pro 版本：https://fastly.jsdelivr.net/gh/inkss/fontawesome@6.0.0/css/all.min.css
-  fontawesome: https://code.bdstatic.com/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css
+  fontawesome: https://npm.elemecdn.com/@fortawesome/fontawesome-free@6.1.1/css/all.min.css
   # katex@0.15.2
   katex:
-    js: https://code.bdstatic.com/npm/katex@0.15.2/dist/katex.min.js
-    css: https://code.bdstatic.com/npm/katex@0.15.2/dist/katex.min.css
-    render: https://code.bdstatic.com/npm/katex@0.15.2/dist/contrib/auto-render.min.js
+    js: https://fastly.jsdelivr.com/npm/katex@0.15.2/dist/katex.min.js
+    css: https://fastly.jsdelivr.com/npm/katex@0.15.2/dist/katex.min.css
+    render: https://fastly.jsdelivr.com/npm/katex@0.15.2/dist/contrib/auto-render.min.js
   # mathjax@3.2.0
   mathjax: https://unpkg.com/mathjax@3.2.0/es5/tex-mml-chtml.js
   # github-markdown-css@5.1.0
-  markdown: https://code.bdstatic.com/npm/github-markdown-css@5.1.0/github-markdown.min.css
+  markdown: https://fastly.jsdelivr.com/npm/github-markdown-css@5.1.0/github-markdown.min.css
   # marked@4.0.10
-  marked: https://code.bdstatic.com/npm/marked@4.0.10/marked.min.js
+  marked: https://fastly.jsdelivr.com/npm/marked@4.0.10/marked.min.js
   # hls.js@1.1.3
-  hlsjs: https://code.bdstatic.com/npm/hls.js@1.1.3
+  hlsjs: https://fastly.jsdelivr.com/npm/hls.js@1.1.3
   # @fancyapps/ui@4.0.12
   fancybox:
-    css: https://code.bdstatic.com/npm/@fancyapps/ui@4.0.12/dist/fancybox.css
-    js: https://code.bdstatic.com/npm/@fancyapps/ui@4.0.12/dist/fancybox.umd.js
+    css: https://fastly.jsdelivr.com/npm/@fancyapps/ui@4.0.12/dist/fancybox.css
+    js: https://fastly.jsdelivr.com/npm/@fancyapps/ui@4.0.12/dist/fancybox.umd.js
   ################ optional plugins ################
   # issues api
   sitesjs:
@@ -705,7 +705,7 @@ plugins:
   # 在支持 srcset 的浏览器或者 RSS 阅读器 (还会有人使用老旧的阅读器？) 上会优先读取 srcset 加载的图片 (懒加载占位图), 对于 RSS 中图片丢失变成懒加载占位图的问题，建议 自行使用脚本移除 srcset 属性 或 关闭图片懒加载 或 在 RSS 中插入 vanilla-lazyload
   lazyload:
     enable: true
-    js: https://code.bdstatic.com/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js
+    js: https://fastly.jsdelivr.com/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js
     onlypost: false
     loadingImg: # https://fastly.jsdelivr.net/gh/volantis-x/cdn-volantis@3/img/placeholder/c617bfd2497fcea598e621413e315c368f8d8e.svg # 不建议使用占位图，建议 loadingImg 为空，当前占位图会产生布局偏移，loadingImg 为空占位图是一个 1X1 像素的图片
     blurIn: true # 模糊加载效果（loadingImg 为空时有效）
@@ -729,17 +729,17 @@ plugins:
     copy_code: true
     # Please set hexo.config.highlight.enable = false !!! set hexo.config.prismjs.enable = true !!!
     js:
-      - https://code.bdstatic.com/npm/prismjs/components/prism-core.min.js
-      - https://code.bdstatic.com/npm/prismjs/plugins/autoloader/prism-autoloader.min.js
-      - https://code.bdstatic.com/npm/plugins/line-numbers/prism-line-numbers.min.js
+      - https://fastly.jsdelivr.com/npm/prismjs/components/prism-core.min.js
+      - https://fastly.jsdelivr.com/npm/prismjs/plugins/autoloader/prism-autoloader.min.js
+      - https://fastly.jsdelivr.com/npm/plugins/line-numbers/prism-line-numbers.min.js
     css:
-      - https://code.bdstatic.com/npm/themes/prism-dark.css
-      - https://code.bdstatic.com/npm/plugins/line-numbers/prism-line-numbers.css
+      - https://fastly.jsdelivr.com/npm/themes/prism-dark.css
+      - https://fastly.jsdelivr.com/npm/plugins/line-numbers/prism-line-numbers.css
 
   # https://scrollrevealjs.org/api/reveal.html
   scrollreveal:
     enable: true
-    js: https://code.bdstatic.com/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js
+    js: https://fastly.jsdelivr.com/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js
     distance: 32px
     duration: 800 # ms
     interval: 20 # ms
@@ -823,7 +823,7 @@ plugins:
 
   # Pjax
   pjax:
-    js: https://code.bdstatic.com/npm/pjax@0.2.8/pjax.min.js
+    js: https://fastly.jsdelivr.com/npm/pjax@0.2.8/pjax.min.js
     enable: true
     cover: true          # 封面是否 pjax 处理 false：每次切换页面封面都重载，适合封面较少的情况 true：封面经过 Pjax 处理，适合封面较多的情况
     timeout: 5000        # The timeout in milliseconds for the XHR requests. Set to 0 to disable the timeout.
@@ -946,8 +946,8 @@ plugins:
   # https://www.swiper.com.cn/
   swiper:
     enable: true
-    css: https://code.bdstatic.com/npm/swiper@6/swiper-bundle.min.css
-    js: https://code.bdstatic.com/npm/swiper@6/swiper-bundle.min.js
+    css: https://fastly.jsdelivr.com/npm/swiper@6/swiper-bundle.min.css
+    js: https://fastly.jsdelivr.com/npm/swiper@6/swiper-bundle.min.js
 
 ############################### Plugins ############################### > end
 
@@ -1265,13 +1265,13 @@ custom_css:
       #fontfamily: '"PingFang SC", "Microsoft YaHei", Helvetica, Arial'
       fontfamily: '"Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial'
       name: 'Varela Round'
-      url: https://code.bdstatic.com/npm/volantis-static/media/fonts/VarelaRound/VarelaRound-Regular.ttf
+      url: https://fastly.jsdelivr.com/npm/volantis-static/media/fonts/VarelaRound/VarelaRound-Regular.ttf
       weight: normal
       style: normal
     bodyfont:
       fontfamily: 'UbuntuMono, "PingFang SC", "Microsoft YaHei", Helvetica, Arial'
       name: 'UbuntuMono'
-      url: https://fast/volantis-static/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf
+      url: https://fastly.jsdelivr.com/npm/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf
       weight: normal
       style: normal
     codefont:
