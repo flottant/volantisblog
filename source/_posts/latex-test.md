@@ -7,6 +7,8 @@ description: 使用 Katex 渲染公式。
 plugins:
   - katex
 ---
+测试公式排版。
+<!-- more -->
 
 $$
 f(x)=\int_{-\infty}^\infty\widehat f\xi\,e^{2\pi i\xi x}\,d\xi
