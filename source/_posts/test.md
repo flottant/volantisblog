@@ -16,7 +16,6 @@ sound of silence.
 
 --- The sound of silence
 
-<!-- more -->
 
 美利坚合众国，2015 年，纽约。
 
