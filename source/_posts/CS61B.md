@@ -142,6 +142,5 @@ https://sp18.datastructur.es/materials/lab/lab1setup/lab1setup
 
 So easy.
 
-Notice: If you enter Chinese Characters, you should go to the "environment variables" settings and add:
-`JAVA_TOOL_OPTIONS` to `-Dfile.encoding=UTF-8`, then open the control pannel, go to: Clock & Area -> Area -> Management -> Program not using unicode -> Select the beta option.
-
+Notice: If you enter Chinese Characters, you should open the control pannel, go to: Clock & Area -> Area -> Management -> Program not using unicode -> Select the beta option.
+However, some pre-installed software may have some configure issues.
