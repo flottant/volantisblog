@@ -637,7 +637,7 @@ tag_plugins:
 ############################### Site Footer ############################### > start
 site_footer:
   # layout of footer: [aplayer, social, license, info, copyright]
-  layout: [social, copyright]
+  layout: [social, copyright,ICP]
   social:
     - icon: #fa-solid fa-rss
       url:
@@ -656,7 +656,7 @@ site_footer:
   # site copyright
   copyright: '[Copyright © since 2022](/)'
   # You can add your own property here. (Support markdown, for example: br: '<br>')
-  br: '<br>'
+  ICP: '<a href="https://icp.gov.moe/?keyword=20220890" target="_blank">萌ICP备20220890号</a>'
 ############################### Site Footer ############################### > end
 
 ############################### Plugins ############################### > start
