@@ -529,7 +529,7 @@ sidebar:
         icon: fa-solid fa-list
         title: 本文目录
       list_number: true
-      min_depth: 2
+      min_depth: 1
       max_depth: 5
     # ---------------------------------------
     # music
