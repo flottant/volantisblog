@@ -126,7 +126,7 @@ using `{` and `}`
 
 - Types are verified before the code even runs!
 
-### Define A Function
+### Define a Function
 
 - Functions must be declared as part of a class in Java. A function that is part of a class is called a **"method"**. So in Java, all functions are methods.
 
@@ -144,3 +144,5 @@ So easy.
 
 Notice: If you enter Chinese Characters, you should open the control pannel, go to: Clock & Area -> Area -> Management -> Program not using unicode -> Select the beta option.
 However, some pre-installed software may have some configure issues.
+
+If you have found that javac command run in powershell output error code, then add environment vars `JAVA_TOOL_OPTIONS=-Duser.language=en`
