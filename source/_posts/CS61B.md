@@ -143,8 +143,10 @@ using `{` and `}`
 So easy.
 
 Notice: If you enter Chinese Characters, you should open the control pannel, go to: Clock & Area -> Area -> Management -> Program not using unicode -> Select the beta option.
-However, some pre-installed software may have some configure issues.
+However, some **pre-installed software** may have some configure issues.
 
-If you have found that javac command run in powershell output error code, then add environment vars `JAVA_TOOL_OPTIONS=-Duser.language=en`
+We strongly recommend you to install jdk 18, which use utf-8 as default. If there's problems, try to input `chcp 936` in the powershell.
 
 However, we strongly recommend you to use an IDE like IDEA, which will solve the code problem more clever.
+
+In the last, we strongly recommend you to use linux-based system to develop or try to avoid Chinese characters.
