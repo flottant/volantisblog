@@ -146,3 +146,5 @@ Notice: If you enter Chinese Characters, you should open the control pannel, go 
 However, some pre-installed software may have some configure issues.
 
 If you have found that javac command run in powershell output error code, then add environment vars `JAVA_TOOL_OPTIONS=-Duser.language=en`
+
+However, we strongly recommend you to use an IDE like IDEA, which will solve the code problem more clever.
