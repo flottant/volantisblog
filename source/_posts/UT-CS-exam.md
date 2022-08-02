@@ -1,8 +1,9 @@
 ---
-title: UT-CS-exam
+title: UT CS exam
 date: 2022-08-02 16:39:00
 tags: [考试题]
 categories: [测试]
+description: 一些测试题。
 plugins:
   - katex
 ---
@@ -214,7 +215,7 @@ $x y$ 平面上に, $0<x<1$ かつ $0<y<1$ で定義される領域 $R$ を考�
 
 (4) 点 $\mathrm{A}_{i}$ の長方形の面積を表す確率変数を $S_{i}$ とする. $Z$ を $S_{1}, S_{2}, \ldots, S_{n}$ の最小值を表 す確率変数とする. この時, $Z$ の確率密度関数を求めよ.
 
-![question3](https://search.pstatic.net/common/?src=https://i.imgur.com/BTix5lI.jpeg)
+{% image https://search.pstatic.net/common/?src=https://i.imgur.com/MflVU51.jpeg::width=300px::alt=第 3 問 %}
 
 ## Problem 3
 Consider a region $R$ defined by $0<x<1$ and $0<y<1$ in the $x y$-plane. We randomly select a point on $R$ and refer to the selected point as $\mathrm{A}$. We assume that $\mathrm{A}$ is uniformly distributed on $R$. Let $\mathrm{AB}$ be a perpendicular line from $\mathrm{A}$ to the $y$-axis and $\mathrm{AC}$ be a perpendicular line from A to the $x$-axis as shown in the figure. We call rectangle OCAB as "the rectangle of $\mathrm{A}$ ", where $\mathrm{O}$ denotes the origin. Let $S$ be a random variable representing the area of the rectangle of $\mathrm{A}$. Answer the following questions.
@@ -228,4 +229,4 @@ Again consider the region $R$. Let $n$ be a positive integer. We select $n$ poin
 
 (4) Let $S_{i}$ be a random variable representing the area of the rectangle of $\mathrm{A}_{i}$. Let $Z$ be a random variable which is the minimum of $S_{1}, S_{2}, \ldots, S_{n}$. Calculate the probability density function of $Z$.
 
-![question3](https://search.pstatic.net/common/?src=https://i.imgur.com/BTix5lI.jpeg)
+{% image https://search.pstatic.net/common/?src=https://i.imgur.com/MflVU51.jpeg::width=300px::alt=Problem 3 %}
