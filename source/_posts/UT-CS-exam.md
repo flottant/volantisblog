@@ -61,13 +61,13 @@ $$
 
 Answer the following questions.
 
-(1) For the case where $G$ is a complete graph $K_{n}$ of $n$ vertices, compute $a_{n}=\max _{\boldsymbol{x} \in\{-1,+1\}^{n}} f_{G}(\boldsymbol{x})$.
+(1) For the case where $G$ is a complete graph $K_{n}$ of $n$ vertices, compute $\displaystyle a_{n}=\max _{\boldsymbol{x} \in\{-1,+1\}^{n}} f_{G}(\boldsymbol{x})$.
 
-(2) Let $K_{n}$ and $a_{n}$ be those given in question (1). Let $b_{n}$ be the number of edges of $K_{n}$. Compute $\lim _{n \rightarrow \infty} \frac{a_{n}}{b_{n}}$.
+(2) Let $K_{n}$ and $a_{n}$ be those given in question (1). Let $b_{n}$ be the number of edges of $K_{n}$. Compute $\displaystyle \lim _{n \rightarrow \infty} \frac{a_{n}}{b_{n}}$.
 
-(3) Let $G$ be an arbitrary simple undirected graph. When each $x_{i}$ takes a value of either $-1$ or $+1$ with probability $\frac{1}{2}$ independently, compute the expected value of $f_{G}(\boldsymbol{x})$. You may use the linearity of expectation.
+(3) Let $G$ be an arbitrary simple undirected graph. When each $x_{i}$ takes a value of either $-1$ or $+1$ with probability $\displaystyle \frac{1}{2}$ independently, compute the expected value of $\displaystyle f_{G}(\boldsymbol{x})$. You may use the linearity of expectation.
 
-(4) Show that, for any simple undirected graph $G$, there exists some $x \in\{-1,+1\}^{n}$ such that $f_{G}(\boldsymbol{x}) \geq \frac{|E|}{2}$. Here, $|E|$ denotes the number of edges of $G$.
+(4) Show that, for any simple undirected graph $G$, there exists some $x \in\{-1,+1\}^{n}$ such that $\displaystyle f_{G}(\boldsymbol{x}) \geq \frac{|E|}{2}$. Here, $|E|$ denotes the number of edges of $G$.
 
 ## Problem 3
 
@@ -136,9 +136,9 @@ $\Omega$ を上記の条件を満たす $z$ が一つでも存在するような
 ## Problem 1
 Consider the following multiple conditions on $x, y, z \in \mathbb{R}$.
 $$
-\left\{\begin{array}{ccc}
-0 & <z-x y & < \\
-0<z-(x+y)^{2} & < & -x y
+\left\{\begin{array}{cc}
+0<z-x y & <1 \\
+0<z-(x+y)^{2} & <-x y
 \end{array}\right.
 $$
 
@@ -160,11 +160,11 @@ $\alpha \geq 1$ と $n>0$ に対し以下の積分 $I_{n}(\alpha)$ を考える.
 $$
 I_{n}(\alpha)=\int_{\frac{1}{n}}^{n} \frac{f(\alpha x)-f(x)}{x} \mathrm{~d} x
 $$
-ただし， 実数值関数 $f(x)$ は $x \geq 0$ において連続かつ微分可能で，導関数が連続であり, $\lim _{x \rightarrow \infty} f(x)=0$ が成り立つと仮定する. 以下の問いに答えよ.
+ただし， 実数值関数 $f(x)$ は $x \geq 0$ において連続かつ微分可能で，導関数が連続であり, $\displaystyle \lim _{x \rightarrow \infty} f(x)=0$ が成り立つと仮定する. 以下の問いに答えよ.
 
-(1) $J_{n}(\alpha)=\frac{\mathrm{d} I_{n}(\alpha)}{\mathrm{d} \alpha}$ とおく. $J_{n}(\alpha)=\frac{1}{\alpha}\left(f(\alpha n)-f\left(\frac{\alpha}{n}\right)\right)$ であることを示せ. ここでは, 積分と微分が交換可能であることを用いてよい.
+(1) $\displaystyle J_{n}(\alpha)=\displaystyle \frac{\mathrm{d} I_{n}(\alpha)}{\mathrm{d} \alpha}$ とおく. $\displaystyle J_{n}(\alpha)=\frac{1}{\alpha}\left(f(\alpha n)-f\left(\frac{\alpha}{n}\right)\right)$ であることを示せ. ここでは, 積分と微分が交換可能であることを用いてよい.
 
-(2) $I(\alpha)=\lim _{n \rightarrow \infty} I_{n}(\alpha)$ とおく. 任意の $\beta \in[1, \alpha]$ に対して $\lim _{n \rightarrow \infty} J_{n}(\beta)$ が存在し, かつ, これが $[1, \alpha]$ 上一様収束することを示し,
+(2) $\displaystyle I(\alpha)=\lim _{n \rightarrow \infty} I_{n}(\alpha)$ とおく. 任意の $\beta \in[1, \alpha]$ に対して $\displaystyle \lim _{n \rightarrow \infty} J_{n}(\beta)$ が存在し, かつ, これが $[1, \alpha]$ 上一様収束することを示し,
 
 $$
 I(\alpha)=\int_{1}^{\alpha}\left(\lim _{n \rightarrow \infty} J_{n}(\beta)\right) \mathrm{d} \beta
@@ -184,13 +184,13 @@ Consider the following integral $I_{n}(\alpha)$ for $\alpha \geq 1$ and $n>0$.
 $$
 I_{n}(\alpha)=\int_{\frac{1}{n}}^{n} \frac{f(\alpha x)-f(x)}{x} \mathrm{~d} x
 $$
-Assume that a real-valued function $f(x)$ is continuous and differentiable on $x \geq 0$, its derivative is continuous, and $\lim _{x \rightarrow \infty} f(x)=0$. Answer the following questions.
+Assume that a real-valued function $f(x)$ is continuous and differentiable on $x \geq 0$, its derivative is continuous, and $\displaystyle \lim _{x \rightarrow \infty} f(x)=0$. Answer the following questions.
 
-(1) Define $J_{n}(\alpha)=\frac{\mathrm{d} I_{n}(\alpha)}{\mathrm{d} \alpha}$. Show that $J_{n}(\alpha)=\frac{1}{\alpha}\left(f(\alpha n)-f\left(\frac{\alpha}{n}\right)\right)$.
+(1) Define $\displaystyle J_{n}(\alpha)=\frac{\mathrm{d} I_{n}(\alpha)}{\mathrm{d} \alpha}$. Show that $\displaystyle J_{n}(\alpha)=\frac{1}{\alpha}\left(f(\alpha n)-f\left(\frac{\alpha}{n}\right)\right)$.
 
 You can use the fact that the integration and the differentiation commute in this context.
 
-(2) Define $I(\alpha)=\lim _{n \rightarrow \infty} I_{n}(\alpha)$. Show that $\lim _{n \rightarrow \infty} J_{n}(\beta)$ exists for any $\beta \in[1, \alpha]$ and it uniformly converges on $[1, \alpha]$, and show that
+(2) Define $\displaystyle I(\alpha)=\lim _{n \rightarrow \infty} I_{n}(\alpha)$. Show that $\displaystyle \lim _{n \rightarrow \infty} J_{n}(\beta)$ exists for any $\displaystyle \beta \in[1, \alpha]$ and it uniformly converges on $[1, \alpha]$, and show that
 $$
 I(\alpha)=\int_{1}^{\alpha}\left(\lim _{n \rightarrow \infty} J_{n}(\beta)\right) \mathrm{d} \beta .
 $$
