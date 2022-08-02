@@ -696,7 +696,7 @@ plugins:
   ######## Plugins to improve loading speed:
   # 预加载
   preload:
-    enable: true
+    enable: false
     service: flying_pages # instant_page, flying_pages
     instant_page: https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/instant.page/5.1.0/instantpage.min.js
     flying_pages: https://fastly.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js
