@@ -110,9 +110,220 @@ Truth table
 
 (3) Consider a clock-synchronous sequential circuit with a 1-bit input CLK, a 1-bit input $\mathbf{X}$, and a 1-bit output Y, where the input CLK is used for the clocking. The output Y is '1' when the number of ' 1 ' in the input $\mathrm{X}$ values in the past three clock cycles (excluding the current clock cycle) is greater than the number of ' 0 '. Otherwise, the output $Y$ is ' 0 '. The output $\mathrm{Y}$ may be any value during the initial three clock cycles after the circuit is powered on. Assume that the circuit satisfies the setup-time and hold-time constraints. Design and depict the circuit. You may use at most two D-flip-flops and an arbitrary number of 2-input AND gates, 2-input OR gates, and NOT gates, if necessary.
 
-# 2022 Winter Math
+# 2022 Summer CS
 
-## 第 1 問
+## 問题 1
+
+オペレーティンク゚システムに関して以下の問いに答えよ.
+
+(1) 5つのプロセス $P_{0}, P_{1}, P_{2}, P_{3}, P_{4}$ に対するスケジューリングについて, 各プロセス $P_{i}$ の到㖖 時間 $(\mathrm{ms})$ と処理時間 $(\mathrm{ms})$ をそれぞ $A_{i}$ と $C_{i}$ で表すすのとする. また, 同時に実行可能 なプロセスは 1 つのみで, コンテキストスイッチのオーバーへッドは無視できるものとする. $A_{0}=35, A_{1}=A_{2}=A_{3}=25, A_{4}=0, C_{0}=10, C_{1}=15, C_{2}=20, C_{3}=30, C_{4}=50$ である 場合に，5つのプロセスを Preemptive Shortest Job Firstアルゴリズムでスケジュールしたと きの平均ターンアラウンド時間と平均応答時間を求めよ. ここで, ターンアラウンド時間とは プロセスの到着から実行完了までの時間とし，応答時間とはプロセスの到着から実行開始まで の時間とする.
+
+(2) 問い (1) と同じ到着時間と処理時間をもつ5つのプロセスを Non-Preemptive Shortest Job First アルゴリズム゙スケジュールしたときの平均ターンアラウンド時間と平均応答時間を求めよ.
+
+(3) 問い (1) と同じ到着時間と処理時間をもつ5つのプロセスをタイムスライスが $10 \mathrm{~ms}$ の Round Robin アルゴリズムでスケジュールしたときの平均ターンアラウンド時間と平均応答時間を求 めよ. プロセスがタイムスライスを使い切らなかった場合は即座に次のプロセスのタイムスラ イスが開始されるすのとする. また, 新たに到着したプロセスは Round Robin キューの末尾 に追加されるものとし, 桵数のプロセスが同時にキューの末尾に到着した場合には残りの処理 時間の短いプロセスの方が優先されて追加されるものとする.
+
+(4) 現実のオペレーティングシステムてはコンテキストスイッチのオーバーヘッドは無視できない. このオーバーヘッドを考慮した場合, Round Robin アルゴリスムの利点と欠点について CPU スケジューリングとメモリ管理の観点から説明せよ.
+
+(5) 現実のオペレーティングシステムではプロセス侁先度を決定するためにしばしば Aging 方式が 使われる. Aging 方式の基本概念と古典的な静的佽先度方式に対する優位性について説明せよ.
+
+## Problem 1
+
+Answer the following questions on operating systems.
+
+(1) For the scheduling of five processes $P_{0}, P_{1}, P_{2}, P_{3}$, and $P_{4}$, the arrival time (ms) and the computation time $(\mathrm{ms})$ of each process $P_{i}$ are denoted by $A_{i}$ and $C_{i}$, respectively. Also, assume that only one process is allowed to execute at any instant, and the overhead of context switches can be ignored. Obtain the average turnaround time and the average response time when the five processes are scheduled by the Preemptive Shortest Job First algorithm, where $A_{0}=35, A_{1}=A_{2}=A_{3}=25, A_{4}=0, C_{0}=10, C_{1}=15, C_{2}=20, C_{3}=30$, and $C_{4}=50$. Here, the turnaround time refers to the time interval from the arrival of the process to the completion of its execution, and the response time refers to the time interval from the arrival of the process to the beginning of its execution.
+
+(2) Obtain the average turnaround time and the average response time when the five processes with the same arrival and computation times as those given in question (1) are scheduled by the Non-Preemptive Shortest Job First algorithm.
+
+(3) Obtain the average turnaround time and the average response time when the five processes with the same arrival and computation times as those given in question (1) are scheduled by the Round Robin algorithm with the time slice $10 \mathrm{~ms}$. The next time slice starts immediately when the current process does not exhaust its time slice. Also, a new process is added to the end of the Round Robin queue upon its arrival, and ties are broken in favor of the processes with shorter remaining computation times if multiple processes arrive at the end of the queue simultaneously.
+
+(4) In real-world operating systems, the overhead of context switches cannot be ignored. Explain the pros and cons of the Round Robin algorithm from the viewpoint of CPU scheduling and memory management, when this overhead is considered.
+
+(5) The Aging scheme is often used to determine process priorities in real-world operating systems. Explain the basic concept of the Aging scheme and its advantage over the classical static-priority scheme.
+
+## 問题 2
+
+C言語で書かれた以下のプログラムは整数配列 `a`の `a[i]` から `a[j-1]` までを昇順に整列する関数 `mysort(a,i,j)` を定義している $(i<j)$. プロクララム中の関数 `multfrac(k,1,m)` は $\mathrm{k}, 1, \mathrm{~m}$ が 正の整数であるとき $\displaystyle \mathrm{k} \times \frac{1}{\mathrm{~m}}$ 以上の最小の整数を求める関数であり, $\mathbf{w}, \mathbf{x}, \mathrm{y}, \mathbf{z}$は正の整数定数とする. 整の数の演算はオーバーフローしないすのとする.
+
+```c
+int multfrac(int k, int l, int m){
+    return (k * l + (m - 1))/m;
+}
+
+void campare_swap(int *p, int *q){
+    if (*p > *q){
+        int tmp = *p;
+        *p = *q;
+        *q = tmp;
+    }
+}
+
+void mysort(int a[],int i,int j){
+    int k -j -i ;
+    if (k < 4){
+        /************
+        *     X     *
+        ************/
+    }
+    else {
+        mysort(a, i, i + multfrac(k, x, w));
+        mysort(a, j - multfrac{k, y, w}, j);
+        mysort(a, i, i + multfrac(k, z, w));
+    }
+    
+}
+```
+
+
+
+以下の問いに答えよ.
+
+（1）(w, x, y, z) が $(4,3,3,3)$ である場合,  空欄  $\mathrm{X}$ に入れるべき適切なコードを答えよ. た だし, comparo_orap 以外の関数呼び出しは不可とする. なお，コードは複数行にわたっても 良い.
+
+(2) `mysort(a, 0, n)` が呼び出された時にコード断片 $\mathrm{X}$ が実行される回数の合㖕を $T(n)$ と 表記する. が  $(\mathbf{w}, \mathbf{x}, \mathrm{y}, \mathbf{z})$$(4,3,3,3)$ である場合, $T(n)$ の $n$ に関するオーダーを与えよ.
+
+(3) (w, x, y, z) が $(4,2,3,3),(4,3,2,3),(4,3,3,2),(4,2,3,2)$ である場合のそれぞれについ て, `mysort` が常に正しく動作するか否かを答えよ.
+
+(4)`mysort `が常に正しく動作するために w, $x, y, z$ が満たすべき必要十分条件を答えよ.
+
+## Problem 2
+
+The following program written in C language defines a function `mysort (a, i, j)`, which sorts an integer array a from `a[i]` to `a[j-1]` in ascending order (where $i<j$ ). The function `multfrac (k, 1, m)` used in the program returns the least integer that is greater than or equal to $\displaystyle k \times \frac{1}{\mathrm{m}}$, when $\mathbf{k}$, 1 , and $m$ are positive integers. Assume that  $\mathbf{w}, \mathbf{x}, \mathrm{y} $  and $\mathbf{z}$ are positive integer constants. Assume also that integer operations never overflow.
+
+```c
+int multfrac(int k, int l, int m){
+    return (k * l + (m - 1))/m;
+}
+
+void campare_swap(int *p, int *q){
+    if (*p > *q){
+        int tmp = *p;
+        *p = *q;
+        *q = tmp;
+    }
+}
+
+void mysort(int a[],int i,int j){
+    int k -j -i ;
+    if (k < 4){
+        /************
+        *     X     *
+        ************/
+    }
+    else {
+        mysort(a, i, i + multfrac(k, x, w));
+        mysort(a, j - multfrac{k, y, w}, j);
+        mysort(a, i, i + multfrac(k, z, w));
+    }
+    
+}
+```
+
+(1) Answer appropriate code to fill the blank $\mathrm{X}$ when $(\mathbf{w}, \mathbf{x}, \mathrm{y}, \mathbf{z})$ is $(4,3,3,3)$. You are not allowed to use a function call except for compare_swap. The code may consist of multiple lines.
+
+(2) Let $T(n)$ denote the number of times that the code fragment $\mathrm{X}$ is executed while `mysort (a, 0, n)` is called. Give the order of $T(n)$ on $n$ when $(\mathrm{w}, \mathrm{x}, \mathrm{y}, \mathrm{z})$ is $(4,3,3,3)$.
+
+(3) Answer whether or not` mysort` always works correctly for each case where  $(\mathbf{w}, \mathbf{x}, \mathrm{y}, \mathbf{z})$ is (4, $2,3,3),(4,3,2,3),(4,3,3,2)$, and $(4,2,3,2)$.
+
+(4) Give a necessary and sufficient condition on $w, x, y$, and $z$ that guarantees` mysort` to always work correctly.
+
+## 問题 3
+$\Sigma_{1}=\{\mathrm{a}, \mathrm{b}\}, \Sigma_{2}=\{\mathrm{t}, \mathrm{f}\}$ とする. 語 $w \in \Sigma_{1}^{*}$ について, $w$ の長さを $|w|$ と畵く.また, 空語（す なわち長さ0の語）を $\epsilon$ と茟く. 語 $w \in \Sigma_{1}^{*}$ について, 関数 $f_{w} \in \Sigma_{1}^{*} \rightarrow \Sigma_{2}^{*}$ を以下のように定義する.
+$\begin{aligned} f_{w}\left(w^{\prime}\right)=\left\{x_{1} \cdots x_{\mid w^{\prime}}\left|\in \Sigma_{2}^{*}\right|\right.\\ & x_{i}= \begin{cases}\mathrm{t} & \text { if } w^{\prime}=u w v \text { for some } u, v \in \Sigma_{1}^{*} \text { such that }|u|=i-1 \\ \mathrm{f} &\text { otherwise }\end{cases} \\\left.\text { for each } i \in\left\{1, \ldots,\left|w^{\prime}\right|\right\}\right\} . \end{aligned}$
+
+すなわち, $f_{w}\left(w^{\prime}\right)$ は $w^{\prime}$ から, $w$ と一致する部分文字列の開始位䍛をたで置き換え, それ以外の位置 を $f$ で罩き換えて得られるものである. 例えば, $f_{a a}(\mathrm{baaab})=\operatorname{fttff}, f_{\epsilon}(\mathrm{abbab})=\operatorname{ttttt}$ である. さらに, 関数 $f_{w}$ を，以下の定義によって $\Sigma_{1}$ 上の言語を $\Sigma_{2}$ 上の言語に写像する関数 $f_{w}^{*}$ に拡張する.
+$$
+f_{w}^{*}(L)=\left\{f_{w}\left(w^{\prime}\right) \mid w^{\prime} \in L\right\} .
+$$
+例えば, $f_{\mathrm{ab}}^{*}\left(\left\{(\mathrm{abb})^{n} \mid n \geq 0\right\}\right)=\left\{(\mathrm{tff})^{n} \mid n \geq 0\right\}$ である.
+
+以下の問いに答えよ.
+
+(1) $f_{\text {aba}}$ (babababa) を求めよ.
+
+(2) $f_{\mathrm{aba}}^{*}\left(\Sigma_{1}^{*}\right)$ を正規表現を用いて表せ.
+
+(3) 語 $w \in \Sigma_{1}^{*}$ (ただし $\left.|w|>0\right)$ および決定性有限オートマトン $\mathcal{A}=\left(Q, \Sigma_{1}, \delta, q_{0}, F\right.$ ) が与えられた とし, $\mathcal{A}$ が受理する言語を $L$ とする. ただし $Q, \delta, q_{0}, F$ は, それぞれ $\mathcal{A}$ の状態集合, 邉移関 数, 初期状態, 受理状培の集合を表すすのとし, 邉移関数 $\delta \in Q \times \Sigma_{1} \rightarrow Q$ は全域関数である とする. $f_{w}^{*}(L)$ を受理する非決定性有限オートマトンを, 䉍単な説明ととすに与えよ. $\epsilon$ 哄移 を用いてもよい.
+
+(4) 以下の命題が真ならばその証明の概賂（ $f_{w}^{*}(L)$ を受理するプッシュダウンオートマトンまたは $f_{w}^{*}(L)$ を生成する文脈自由文法を简単な説明とともに示せばよい）を, 偽ならば反例を示せ. 命頙 :「すべての語 $w \in \Sigma_{1}^{*}$ について, $L \subseteq \Sigma_{1}^{*}$ が文脈自由言語ならば, $f_{w}^{*}(L)$ も文脈自由言語 である」
+
+## Problem 3
+Let $\Sigma_{1}=\{\mathrm{a}, \mathrm{b}\}$ and $\Sigma_{2}=\{\mathrm{t}, f\}$. For a word $w \in \Sigma_{1}^{*}$, we write $|w|$ for the length of $w$. We also write $\epsilon$ for the empty word (i.e., the word of length 0). For a word $w \in \Sigma_{1}^{*}$, we define the function $f_{w} \in \Sigma_{1}^{*} \rightarrow \Sigma_{2}^{*}$ by:
+$$
+\begin{aligned}
+f_{w}\left(w^{\prime}\right)=\left\{x_{1} \cdots x_{\left|w^{\prime}\right|} \in \Sigma_{2}^{*} \mid\right.\\
+& x_{i}= \begin{cases}t & \text { if } w^{\prime}=u w v \text { for some } u, v \in \Sigma_{1}^{*} \text { such that }|u|=i-1 \\
+f &\text { otherwise }\end{cases} \\
+&\text { for each } \left.i \in\left\{1, \ldots,\left|w^{\prime}\right|\right\}\right\} .
+\end{aligned}
+$$
+In other words, $f_{w}\left(w^{\prime}\right)$ is the word obtained from $w^{\prime}$ by replacing the start position of each subword that matches $w$ with $t$ and any other position with $f$. For example, $f_{a a}($ baaab $)=$ fttff and $f_{\epsilon}($ abbab $)=$ ttttt. Furthermore, we extend the function $f_{w}$ to the function $f_{w}^{*}$ that maps a language over $\Sigma_{1}$ to a language over $\Sigma_{2}$ by the following definition:
+$$
+f_{w}^{*}(L)=\left\{f_{w}\left(w^{\prime}\right) \mid w^{\prime} \in L\right\} .
+$$
+For example, $f_{\mathrm{ab}}^{*}\left(\left\{(\mathrm{abb})^{n} \mid n \geq 0\right\}\right)=\left\{(\operatorname{tff})^{n} \mid n \geq 0\right\}$.
+Answer the following questions.
+
+(1) Compute $f_{\text {aba }}$ (babababa).
+
+(2) Express $f_{\mathrm{aba}}^{*}\left(\Sigma_{1}^{*}\right)$ by using a regular expression.
+
+(3) Suppose that a word $w \in \Sigma_{1}^{*}$ (where $|w|>0$ ) and a deterministic finite automaton $\mathcal{A}=$ $\left(Q, \Sigma_{1}, \delta, q_{0}, F\right)$ are given, and that $L$ is the language accepted by $\mathcal{A}$. Here, $Q, \delta, q_{0}, F$ are respectively the set of states, the transition function, the initial state, and the set of accepting states of $\mathcal{A}$. Assume that the transition function $\delta \in Q \times \Sigma_{1} \rightarrow Q$ is total. Give a nondeterministic finite automaton that accepts $f_{w}^{*}(L)$, with a brief explanation. You may use $\epsilon$-transitions.
+
+(4) If the following proposition is true, then give a proof sketch (it suffices to show a pushdown automaton that accepts $f_{w}^{*}(L)$ or a context-free grammar that generates $f_{w}^{*}(L)$, with a brief explanation). Otherwise, give a counterexample.
+
+Proposition: "For every word $w \in \Sigma_{1}^{*}$, if $L \subseteq \Sigma_{1}^{*}$ is a context-free language, then $f_{w}^{*}(L)$ is also a context-free language."
+
+## 問题 4
+コンピュータアーキテクチャに関する以下の問いに答えよ.
+
+(1) 命令 $i$ が生成する結果を命令 $j$ が利用する可能性がある場合に, 命令 $i$ に対する命令 $j$ のデタ 依存が存在するといい, $j \rightarrow i$ と表す. 以下のプログラムに存在するデータ依存をすべて示せ. 各命令の動作はプログラム中のコメント（#以降の記述）の通りである. プログラムを実行す るプロセッサは x0 から x31 までの 32 個のレジスタを持ち, x0 は常に 0 を保持するゼロレジ スタとする. コメント中, メモリの addr 番地へのアクセスを “`memory [addr]`" と表す.
+
+```
+命令 0)       addi x3, x0, 64     # x3 <- x0 + 64
+命令 1)       addi x4, x0, 0      # x4 <- x0 + 0
+命令 2)       addi x5, x0, 0      # x5 <- x0 + 0
+命令 3) Loop: lw x6, 0 (x4)       # x6 <- memory [x4 + 0]
+命令 4)       add x5, x5, x6      # x5 <- x5 + x6
+命令 5)       addi x4, x4, 4      # x4<-x4 + 4
+命令 6)       blt x4, x3, Loop    # if x4 x3, goto Loop
+命令 7)       sw x5, 4096(x0)     # memory[x0 + 4096] <- x5
+```
+
+(2) 每クロックサイクハ最大 1 命令を発行する, 5 段ステージのパイプラインプロセッサを考える. このプロセッサは, 命令フェッチ (`IF`) ステージ, 命令テコードとVジスタフェッチ (`ID`) ステー ジ, 実行 (`EX`) ステーシ, メモリアクセス (`MA`) ステージ, Vジスタ書き込み (`WB`) ステー ジの 5つのステージて棤成される. 各レジスタのピット幅は 32 である. 1 クロックサイクルて アクセス可能な命令メモリとデータメモリを持つすのとし, ロードワード命令 `lw` おびスト フワード命令 `sw`$ が `MA` ステージでストールすることはない. 命令 `lw` に関する被ロード・デー タハザードが発生する場合, `IF` ステージ, `ID`ステージ，`EX`ステージを1クロックサイクル するまで, `IF` ステージおよびID ステージをストールさせる. つまり, 分岐命令のフェッチ後, 2クロックサイクルの間, 後続の命令をフェッチしない，`EX`ステージでの実行結果およびMA ステージでのロード結果は, `EX`ステージに適切にフォワーデンングされるものとする.
+
+被ロード・データハザードとは何かを説明せよ．また, このプロセッサ上て間い (1) のプログ ラムを実行する際に, 被ロード・゙゙ータハザードがとのように発生するかを説明せよ.
+
+被ロード・データハザードとは何かを説明せよ. また, このプロセッサ上て問い (1) のプログ ラムを実行する際に，被ロード・データハザードがどのように発生するかを説明せよ.
+
+(3) 問い (2) のプロセッサ上で, 問い (1) のプログラムを実行する際に要するクロックサイクル数 を求めよ. また, 平均 IPC (instructions per cycle) を小数第 2 位まで求めよ.
+
+（4）問い (1) のプログラムおよび問い (2) のプロセッサを例に，動的分岐予測の原理と役割を説明 せよ.
+
+## Problem 4
+Answer the following questions on computer architecture.
+
+(1) When the instruction $j$ may use the result generated by the instruction $i$, we say there is a data dependency from the instruction $j$ to the instruction $i$, and write $j \rightarrow i$. Give all data dependencies in the program below. The behavior of each instruction is described as a comment (the description after #) in the program. The processor which executes the program has 32 registers from $x 0$ to $x 31$, and $x 0$ is the zero register that always keeps the value 0 . In the comment, we represent a memory access to the address addr on the memory as "`memory [addr]`".
+
+```
+instruction 0)       addi x3, x0, 64     # x3 <- x0 + 64
+instruction 1)       addi x4, x0, 0      # x4 <- x0 + 0
+instruction 2)       addi x5, x0, 0      # x5 <- x0 + 0
+instruction 3) Loop: lw x6, 0 (x4)       # x6 <- memory [x4 + 0]
+instruction 4)       add x5, x5, x6      # x5 <- x5 + x6
+instruction 5)       addi x4, x4, 4      # x4<-x4 + 4
+instruction 6)       blt x4, x3, Loop    # if x4 x3, goto Loop
+instruction 7)       sw x5, 4096(x0)     # memory[x0 + 4096] <- x5
+```
+(2) Consider a 5-stage pipeline processor that issues up to one instruction per clock cycle. The processor consists of 5 stages: instruction fetch (`IF`) stage, instruction decode and register fetch (`ID`) stage, execution (`EX`) stage, memory access (`MA`) stage, and register write back (`WB`) stage. The bit width of each register is 32. The processor has the instruction and data memories that can be accessed in one clock cycle, and load-word `lw` and store-word sw instructions do not stall on the `MA` stage. If there is a load-use data hazard for `lw` instruction, the `IF`, `ID`, and `EX` stages are stalled for one clock cycle. The branch instruction blt (branch if less than) stalls the `IF` and `ID` stages until the branch result is determined in the `EX` stage. Thus, the processor does not fetch subsequent instructions for two clock cycles after a branch instruction is fetched. Execution results in the `EX` stage and load results in the `MA` stage are properly forwarded to the `EX` stage.
+
+Explain what the load-use data hazard is. Explain also how load-use data hazards occur when the program in question (1) is executed on the processor.
+
+(3) Calculate the number of clock cycles required for the execution of the program in question (1) on the processor in question (2). Calculate also the average IPC (instructions per cycle) up to two places of decimals.
+
+(4) Using the program in question (1) and the processor in question (2) as an example, explain the mechanism and role of dynamic branch prediction.
+# 2022 Math
+
+## 問题1
 
 以下の $x, y, z \in \mathbb{R}$ に関する複数の条件を考える.
 $$
@@ -154,7 +365,7 @@ Let $\Omega$ be the set of points $(x, y)$ for which at least one $z$ exists sat
 
 (5) Calculate the area of the set $\Omega$. Note that the absolute value of the determinant of a matrix is the area scale factor of the transformation with that matrix.
 
-## 第 2 問
+## 問题2
 
 $\alpha \geq 1$ と $n>0$ に対し以下の積分 $I_{n}(\alpha)$ を考える.
 $$
@@ -202,7 +413,7 @@ $$
 \int_{0}^{\infty} \frac{e^{-p x} \cos (p x)-e^{-q x} \cos (q x)}{x} \mathrm{~d} x
 $$
 
-## 第 3 問
+## 問题3
 
 $x y$ 平面上に, $0<x<1$ かつ $0<y<1$ で定義される領域 $R$ を考える. $R$ 上にランダムに 1 点を選び, それを点 $\mathrm{A}$ とする. ただし, 点 $\mathrm{A}$ は $R$ 上に一様に分布するとする. 図に表すよ うに, 点 $\mathrm{A}$ から $y$ 軸への垂線を $\mathrm{AB}$, 点 $\mathrm{A}$ から $x$ 輣への垂線を $\mathrm{AC}$ とする. 原点を $\mathrm{O}$ とした とき, 長有形 $\mathrm{OCAB}$ を「点 $\mathrm{A}$ の長方形」と呼ぶ. また, 点 $\mathrm{A}$ の長友形の面䅡を表す確率変 数を $S$ とする. 以下の問いに答えよ.
 
