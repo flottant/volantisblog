@@ -117,7 +117,7 @@ cover:
     home: true
     archive: true
     others: false # can be written in front-matter 'cover: true'
-  background: https://unpkg.com/flotimg@1.0.7/pixiv-recommend/71462111_p0.webp
+  background: https://fastly.jsdelivr.net/npm/flotimg@1.0.7/pixiv-recommend/71462111_p0.webp
   #https://api.maho.cc/random-img/pc.php
   #https://unpkg.com/flotimg@1.0.7/pixiv-recommend/71462111_p0.webp
   # background: https://bing.ioliu.cn/v1/rand?w=1920&h=1200

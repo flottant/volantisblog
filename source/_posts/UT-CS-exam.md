@@ -4,6 +4,7 @@ date: 2022-08-02 16:39:00
 tags: [考试题]
 categories: [测试]
 description: 一些测试题。
+draft: true
 plugins:
   - katex
 ---
