@@ -117,7 +117,9 @@ cover:
     home: true
     archive: true
     others: false # can be written in front-matter 'cover: true'
-  background: https://fastly.jsdelivr.net/npm/flotimg@1.0.7/pixiv-recommend/71462111_p0.webp
+  background: https://code.bdstatic.com/npm/flotimg@1.0.7/pixiv-recommend/71462111_p0.webp
+  #https://langwenchong.gitee.io/figure-bed/1619516024594.jpeg
+  #https://fastly.jsdelivr.net/npm/flotimg@1.0.7/pixiv-recommend/71462111_p0.webp
   #https://api.maho.cc/random-img/pc.php
   #https://unpkg.com/flotimg@1.0.7/pixiv-recommend/71462111_p0.webp
   # background: https://bing.ioliu.cn/v1/rand?w=1920&h=1200
@@ -264,7 +266,7 @@ article:
       # 默认文章作者（可在 _data/author.yaml 中增加其他作者，并在 front-matter 中设置）
       # https://volantis.js.org/advanced-settings/#多人协同
       author:
-        avatar: https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/apple-touch-icon.png
+        # avatar: https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/apple-touch-icon.png
         name: flot
         url: /
       # 文章创建日期
@@ -949,8 +951,8 @@ plugins:
   # https://www.swiper.com.cn/
   swiper:
     enable: true
-    css: https://fastly.jsdelivr.com/npm/swiper@6/swiper-bundle.min.css
-    js: https://fastly.jsdelivr.com/npm/swiper@6/swiper-bundle.min.js
+    css: https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/Swiper/6.8.4/swiper-bundle.min.css
+    js: https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/Swiper/6.8.4/swiper-bundle.min.js
 
 ############################### Plugins ############################### > end
 
