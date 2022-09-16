@@ -23,4 +23,4 @@ jobs:
           action: 'upload'
           app_location: '/'
           output_location: 'public'
-          app_build_command: 'npm run deploy'
+          app_build_command: 'npm install hexo && hexo g && gulp'
